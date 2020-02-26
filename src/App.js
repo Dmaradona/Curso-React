@@ -45,16 +45,17 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-
+    console.log('Executou o componentDidMount')
   }
 
   componentWillMount(){
-    
+
   }
 
     /* DENTRO DO RENDER SÓ PODE RETORNAR UM NÓ OU UM AGRUPADO EM UMA DIV OU USAR A NOMENCLATURA <> QUE AÍ ENTENDE-SE QUE É UM GRUPO DE COMPONENTES*/
   render(){
     /* OUTRA FORMA DE CRIAR COMPONENTE */
+    console.log('Executou o render')
     const MeuComboBox = () => this.criaComboBox()
 
     /* variáveis props não são modificáveis*/
@@ -62,7 +63,7 @@ class App extends React.Component{
     <> 
       <input type="text" value={ this.state.nome } onChange={ this.modificarNome } />
       <h1>Hello { this.state.nome }</h1>
-    <h1>Hello { this.props.nome } sua idade é { this.props.idade }</h1> 
+      <h1>Hello { this.props.nome } sua idade é { this.props.idade }</h1> 
       { this.criaComboBox() }
       <MeuComboBox></MeuComboBox>
     </>
